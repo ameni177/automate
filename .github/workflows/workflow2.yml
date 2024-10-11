@@ -1,0 +1,17 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main  # Ändere dies, falls nötig.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository klonen
+        run: git clone https://github.com/ameni177/Tiere-app .  # Ersetze mit deinem Repository.
+
+      - name: Abhängigkeiten installieren
+        run: npm install
