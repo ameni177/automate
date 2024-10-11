@@ -3,7 +3,7 @@ name: CI Workflow
 on:
   push:
     branches:
-      - main  # Ändere dies, falls nötig.
+      - main  # Change this if necessary.
 
 jobs:
   build:
@@ -11,7 +11,13 @@ jobs:
 
     steps:
       - name: Repository klonen
-        run: git clone https://github.com/ameni177/Tiere-app .  # Ersetze mit deinem Repository.
-      - name: change diectory
-        run: cd frontend
+        run: git clone https://github.com/ameni177/Tiere-app .  # Clone the repository.
 
+      - name: Wechsel in das frontend-Verzeichnis
+        run: cd frontend  # This step changes the directory but doesn't affect the next steps directly.
+
+      - name: Artefakt speichern
+        uses: actions/upload-artifact@v2
+        with:
+          name: tiere-app-artifact
+          path: frontend/  # Specify the path to the folder you want to save.
