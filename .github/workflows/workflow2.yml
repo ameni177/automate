@@ -15,5 +15,3 @@ jobs:
       - name: change diectory
         run: cd frontend
 
-      - name: Abhängigkeiten installieren
-        run: npm install
