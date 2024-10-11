@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: change diectory
+        run: cd C:\Users\Techstarter\Desktop\githubactions
       - name: Repository klonen
         run: git clone https://github.com/ameni177/Tiere-app .  # Ersetze mit deinem Repository.
       - name: change diectory
